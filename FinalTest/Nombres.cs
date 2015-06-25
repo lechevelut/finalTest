@@ -31,6 +31,14 @@ namespace FinalTest
                     .Select(x => x.Key)
                     .Aggregate((i, j) => i + ", " + j);
             }
-        } 
+        }
+
+        public string PremierNombreDontLeTexteContientPlusDe5Caractères
+        {
+            get
+            {
+                return keyValuePairs.Where(x => x.Key.Length > 5).Select(x => x.Key).First();
+            }
+        }
     }
 }
