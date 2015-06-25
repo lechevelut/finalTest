@@ -10,6 +10,11 @@ namespace FinalTest
     {
         private string numeroCompte;
 
+        public CompteBancaire(CompteCréé compteCréé, DépotRéalisé dépotRéalisé)
+        {
+            numeroCompte = compteCréé.NuméroDeCompte;
+        }
+
         public CompteBancaire(CompteCréé compteCréé)
         {
             numeroCompte = compteCréé.NuméroDeCompte;
@@ -24,6 +29,11 @@ namespace FinalTest
         public IEnumerable<IEvenementMetier> FaireUnDepot(Montant montantDepot, DateTime dateDepot)
         {
             yield return new DépotRéalisé(numeroCompte, montantDepot, dateDepot);
+        }
+
+        public IEnumerable<IEvenementMetier> FaireUnRetrait(Montant montantRetrait, DateTime dateRetrait)
+        {
+            yield return new RetraitRéalisé(numeroCompte, montantRetrait, dateRetrait);
         }
     }
 }
