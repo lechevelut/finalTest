@@ -40,5 +40,15 @@ namespace FinalTest
                 return keyValuePairs.Where(x => x.Key.Length > 5).Select(x => x.Key).First();
             }
         }
+
+        public IEnumerable<int> QuatreNombresSupérieursSuivant3
+        {
+            get
+            {
+                return keyValuePairs.Where(x => x.Value > 3)
+                    .OrderBy(x => x.Value)
+                    .Select(x => x.Value).Take(4);
+            }
+        }
     }
 }
