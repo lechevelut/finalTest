@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FinalTest
 {
-    public class Montant
+    public struct Montant
     {
 
         private int valeur;
@@ -13,6 +13,12 @@ namespace FinalTest
         public Montant(int valeur)
         {
             this.valeur = valeur;
+        }
+
+        public int Valeur
+        {
+            get { return valeur; }
+            set { valeur = value; }
         }
     }
 }

@@ -17,5 +17,10 @@ namespace FinalTest
             this.montantDepot = montantDepot;
             this.dateDepot = dateDepot;
         }
+
+        public Montant MontantDepot
+        {
+            get { return montantDepot; }
+        }
     }
 }

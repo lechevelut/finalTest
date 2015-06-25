@@ -20,5 +20,10 @@ namespace FinalTest
         {
             get { return _numéroDeCompte; }
         }
+
+        public int AutorisationDeCrédit
+        {
+            get { return autorisationDeCrédit; }
+        }
     }
 }
