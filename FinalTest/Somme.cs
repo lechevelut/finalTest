@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FinalTest
 {
-    public class Somme
+    public class Somme : IOperation
     {
         public Somme()
         {

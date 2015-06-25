@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FinalTest
 {
-    public class Multiplication
+    public class Multiplication : IOperation
     {
 
         public bool PeutCalculer(string operation)
